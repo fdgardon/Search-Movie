@@ -1,11 +1,11 @@
-const Profile = require("./lib/profile");
+
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
-const fs = require("fs");
+
 
 
 const sequelize = require('./config/connection');
