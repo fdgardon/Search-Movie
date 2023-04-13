@@ -107,6 +107,38 @@ function displayMovieDetails(details){
  var award = details.Awards
  localStorage.setItem("Awards", details.Awards)
  
+ let movie = {
+    title: movieTitle,
+    year,
+    rating,
+    released,
+    genre,
+    writer,
+    actors,
+    plot,
+    language,
+    awards,
+    imdb
+ };
+
+async function grabFromLocalStorageAndSave(event)
+{
+    //grabbus;
+    console.log(movie.imdb);
+    console.log(imdb);
+    const response = await fetch('/api/users/save', {
+        method: 'POST',
+        body: JSON.stringify({ imdb, movieTitle, year, rating, released, genre, writer, actors, plot, language, awards }),
+        headers: { 'Content-Type': 'application/json' }
+    });
+    if(response.ok)
+        console.log("saved: ", "test stuff-----------------");
+
+    //savus;
+}
+
+//add event listener to save button
+saveBtn.addEventListener('click', grabFromLocalStorageAndSave);
 }
 
 window.addEventListener('click', (event) => {

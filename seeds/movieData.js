@@ -2,6 +2,7 @@ const { Movie } = require('../models');
 
 const moviedata = [
   {
+      user_id:  3,
       id:         "1",
       imdb:       "tt0083658",
       title:      "Blade Runner",
@@ -17,6 +18,7 @@ const moviedata = [
       poster:     "action.png",
   },
 {     
+      user_id:  2,
       id:         "2",
       imdb:       "tt0091369",
       title:      "Labyrinth",
@@ -32,6 +34,7 @@ const moviedata = [
       poster:     "spooky.png",
 },
 {
+      user_id:  1,
       id:         "3",
       imdb:       "tt0113118",
       title:      "Friday",
