@@ -59,9 +59,10 @@ function loadMovieDetails(){
             const movieDetails = await result.json();
             // console.log(movieDetails);
             displayMovieDetails(movieDetails);
-            saveBtn.style.display = "block"
+            saveBtn.style.display= "block"
 
         });
+        saveBtn.style.display= "block"
     });
 }
 
@@ -117,8 +118,8 @@ function displayMovieDetails(details){
     actors,
     plot,
     language,
-    awards,
-    imdb
+    award,
+    
  };
 
 async function grabFromLocalStorageAndSave(event)

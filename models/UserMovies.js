@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// create our Trip model
+// create our UserMovies model
 class UserMovies extends Model {}
 
-// create fields/columns for Trip model
+// create fields/columns for UserMovies model
 UserMovies.init(
   {
     id: {
@@ -35,7 +35,7 @@ UserMovies.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'trip'
+    modelName: 'usermovie'
   }
 );
 
